@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    font-family: "Press Start 2P", system-ui;
+    background-image: linear-gradient(90deg, #CE0F00, #0d06de);
+}
+
+.container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+}
+
+.container .card{
+    border-radius: 30px;
+    transform-style: preserve-3d;
+    border: solid 5px #f6f6f6;
+    border-radius: 30px;
+}
+
+
+.container .card a{
+    width: 300px;
+    height: 450px;
+    background-image: linear-gradient(45deg, #150485, #462bf3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    text-decoration: none;
+    transform-style: preserve-3d;
+}
+
+.container .card img.img-play{
+    max-width: 200px;
+    background-color: transparent;
+    transform-style: preserve-3d;
+    transition: .5s;
+}
+
+.container .card:hover img.img-play, .container .card a h3{
+    transform: translate3d(0,0,130px);
+    
+}
+
+.container .card a h3{
+    color: #f6f6f6;
+    font-size: 24px;
+    font-weight: 500;
+    transform-style: preserve-3d;
+    transition: .5s;
+}
+
+footer{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #f6f6f6;
+    font-weight: 500;
+}
+
+footer h2{
+    font-size: 18px;
+    font-weight: 300;
+}
+
+footer p {
+    font-size: 12px;
+}
+
+@media (max-width: 370px){
+    .container .card a{
+        width: 230px;
+        height: 380px;
+    }
+
+    .container .card img.img-play{
+        max-width: 150px;
+    }
+
+    .container .card a h3{
+        font-size: 18px;
+    }
+
+    footer h2{
+        font-size: 15px;
+    }
+}

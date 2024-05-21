@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board{
+    width: 100%;
+    height: 100vh;
+    border: solid 2px #FF0000;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87CEEB, #E0F6FF);
+}
+
+.pipe{
+    position: absolute;
+    bottom: 50px;
+    width: 80px;
+    animation: pipe-animation 2.1s infinite linear;
+}
+
+.mario{
+    width: 150px;
+    position: absolute;
+    bottom: 50px;   
+}
+
+.jump{
+    animation: jump 500ms ease-out;
+}
+
+.cloud{
+    position: absolute;
+    width: 500px;
+    animation: cloud-animation 15s infinite linear;
+}
+
+.ground{
+    position: absolute;
+    width: 200%;
+    height: 50px;
+    bottom: 0;
+    background: url(../assets/piso.png) repeat-x;
+    background-size: contain;
+    animation: ground-animation 2s infinite linear;
+}
+
+
+@keyframes pipe-animation{
+    from{
+        right: -80px;
+    }
+
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes jump{
+    0%{
+        bottom: 50px;
+    }
+
+    40%{
+        bottom: 180px;
+    }
+
+    50%{
+        bottom: 180px;
+    }
+
+    70%{
+        bottom: 180px;
+    }
+
+    100%{
+        bottom: 50px;
+    }
+}
+
+@keyframes cloud-animation{
+    from{
+        right: -550px;
+    }
+
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes ground-animation{
+    0%{
+        transform: translateX(0);
+    }
+
+    100%{
+        transform: translateX(-50%);
+    }
+}
+
+@media(max-width: 850px){
+    .pipe{
+        animation: pipe-animation 1.5s infinite linear;
+    }
+
+    .ground{
+        animation: ground-animation 1.3s infinite linear;
+    }
+}
+
+@media(max-width: 530px){
+    .pipe{
+        animation: pipe-animation 1.2s infinite linear;
+    }
+
+    .ground{
+        animation: ground-animation 1s infinite linear;
+    }
+}
